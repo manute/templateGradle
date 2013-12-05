@@ -1,0 +1,4 @@
+templateGradle
+==============
+
+Gradle template project

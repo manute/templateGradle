@@ -12,9 +12,7 @@ repositories {
 }
 
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '2.0.4'
-
-    compile 'org.codehaus.groovy:groovy-all:2.0.4'
+    compile 'org.codehaus.groovy:groovy-all:2.3.7'
     compile group: 'org.slf4j', name:'slf4j-api', version: '1.6.4'
     compile 'org.apache.ant:ant:1.7.1'
 
@@ -50,3 +48,21 @@ def testTaskFailed(task) {
     task instanceof Test && !project.testFailed.isEmpty()
 }
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.bluepapa32:gradle-watch-plugin:0.1.3'
+    }
+}
+
+apply plugin: 'watch'
+
+watch {
+
+    java {
+        files files('src/main/java')
+        tasks 'compileJava'
+    }
+}

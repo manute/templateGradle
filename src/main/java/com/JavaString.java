@@ -2,7 +2,7 @@ package com;
 
 class JavaString {
 
-   private final String heyy = "heyy";
+   private final String heyy = "hey";
 
    public JavaString(){}
 

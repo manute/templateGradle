@@ -2,9 +2,9 @@ package com
 
 class GroovyString {
 
-  private final heyyy = "heyyy";
+    private final heyyy = "heyyy";
 
-  def state() {
-    heyyy
-  }
+    def state() {
+        heyyy
+    }
 }
